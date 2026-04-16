@@ -59,5 +59,16 @@ namespace App_ListaEnlazadaDoble
             }
             return null;
         }
+
+        public void Modificar(string aNom, string nNom, byte nEdad)
+        {
+            NodoD modi = Buscar(aNom);
+
+            if(modi != null)
+            {
+                modi.Nombre = nNom;
+                modi.Edad = nEdad;
+            }
+        }
     }
 }
