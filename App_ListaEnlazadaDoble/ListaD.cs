@@ -20,12 +20,30 @@ namespace App_ListaEnlazadaDoble
             if(primero == null)
             {
                 primero = nuevo;
+                primero.Siguiente = null;
                 ultimo = nuevo;
+                ultimo.Siguiente = null;
             }
             else
             {
-
+                ultimo.Siguiente = nuevo;
+                nuevo.Siguiente = null;
+                nuevo.Anterior = ultimo;
+                ultimo = nuevo;
             }
         }
+        public void Mostrar(ListView l)
+        {
+            NodoD actual = primero;
+
+            while(actual != null)
+            {
+                ListViewItem item = new ListViewItem(actual.Nombre);
+                item.SubItems.Add(actual.Edad.ToString());
+                l.Items.Add(item);
+                actual = actual.Siguiente;
+            }
+        }
+
     }
 }
