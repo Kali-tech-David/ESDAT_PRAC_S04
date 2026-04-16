@@ -135,9 +135,9 @@
             // listView1
             // 
             listView1.Columns.AddRange(new ColumnHeader[] { CHNombres, CHEdades });
-            listView1.Location = new Point(262, 164);
+            listView1.Location = new Point(289, 164);
             listView1.Name = "listView1";
-            listView1.Size = new Size(333, 193);
+            listView1.Size = new Size(284, 193);
             listView1.TabIndex = 10;
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;

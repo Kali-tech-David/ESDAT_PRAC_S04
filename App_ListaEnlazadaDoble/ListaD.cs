@@ -70,5 +70,24 @@ namespace App_ListaEnlazadaDoble
                 modi.Edad = nEdad;
             }
         }
+
+        public void Eliminar(string nom)
+        {
+            NodoD eli = Buscar(nom);
+            if(eli != null)
+            {
+                if(eli == primero)
+                {
+
+                }else if(eli != ultimo)
+                {
+
+                }
+                else
+                {
+
+                }
+            }
+        }
     }
 }
