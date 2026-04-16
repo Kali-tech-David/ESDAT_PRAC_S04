@@ -45,5 +45,19 @@ namespace App_ListaEnlazadaDoble
             }
         }
 
+        public NodoD Buscar(string nom)
+        {
+            NodoD actual = primero;
+
+            while(actual != null)
+            {
+                if(actual.Nombre == nom)
+                {
+                    return actual;
+                }
+                actual = actual.Siguiente;
+            }
+            return null;
+        }
     }
 }

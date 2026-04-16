@@ -38,6 +38,8 @@
             btnModificar = new Button();
             btnEliminar = new Button();
             listView1 = new ListView();
+            CHNombres = new ColumnHeader();
+            CHEdades = new ColumnHeader();
             SuspendLayout();
             // 
             // lblTitulo
@@ -77,6 +79,7 @@
             btnInsertar.TabIndex = 4;
             btnInsertar.Text = "Insertar";
             btnInsertar.UseVisualStyleBackColor = true;
+            btnInsertar.Click += btnInsertar_Click;
             // 
             // lblIngresa2
             // 
@@ -96,7 +99,6 @@
             txtEdad.Name = "txtEdad";
             txtEdad.Size = new Size(100, 27);
             txtEdad.TabIndex = 6;
-            txtEdad.TextChanged += this.textBox2_TextChanged;
             // 
             // btnBuscar
             // 
@@ -130,11 +132,22 @@
             // 
             // listView1
             // 
+            listView1.Columns.AddRange(new ColumnHeader[] { CHNombres, CHEdades });
             listView1.Location = new Point(262, 164);
             listView1.Name = "listView1";
             listView1.Size = new Size(333, 193);
             listView1.TabIndex = 10;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.View = View.Details;
+            // 
+            // CHNombres
+            // 
+            CHNombres.Text = "NOMBRE";
+            CHNombres.Width = 220;
+            // 
+            // CHEdades
+            // 
+            CHEdades.Text = "EDAD";
             // 
             // Form1
             // 
@@ -169,5 +182,7 @@
         private Button btnModificar;
         private Button btnEliminar;
         private ListView listView1;
+        private ColumnHeader CHNombres;
+        private ColumnHeader CHEdades;
     }
 }
