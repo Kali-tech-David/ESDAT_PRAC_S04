@@ -78,14 +78,19 @@ namespace App_ListaEnlazadaDoble
             {
                 if(eli == primero)
                 {
-
-                }else if(eli != ultimo)
+                    primero = primero.Siguiente;
+                    if(primero != null)
+                    primero.Anterior = null;
+                }else if(eli == ultimo)
                 {
-
+                    ultimo = ultimo.Anterior;
+                    if(ultimo != null)
+                    ultimo.Siguiente = null;
                 }
                 else
                 {
-
+                    eli.Anterior.Siguiente = eli.Siguiente;
+                    eli.Siguiente.Anterior = eli.Anterior;
                 }
             }
         }

@@ -64,9 +64,23 @@ namespace App_ListaEnlazadaDoble
                     }
                     else MessageBox.Show("Modificar a una edad entre 0 - 150");
 
-                } else MessageBox.Show("Modificar a un nombre válido!");
-                
-            } else MessageBox.Show("Seleccione un nombre a modificar!");
+                }
+                else MessageBox.Show("Modificar a un nombre válido!");
+
+            }
+            else MessageBox.Show("Seleccione un nombre a modificar!");
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count > 0)
+            {
+                string select = listView1.SelectedItems[0].Text;
+                l.Eliminar(select);
+                listView1.Items.Clear();
+                l.Mostrar(listView1);
+            }
+            else MessageBox.Show("Seleccione un nombre a eliminar.");
         }
     }
 }
